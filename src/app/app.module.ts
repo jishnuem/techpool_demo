@@ -15,12 +15,21 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import {MatStepperModule} from '@angular/material/stepper';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MasterpageComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent,
+    ContactsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +43,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatSidenavModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
+    PdfViewerModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,6 +16,14 @@ const routes: Routes = [
       {
         path:"dashboard",
         loadChildren: () => import('./pages/dashboard/dashboard.module').then((m)=>m.DashboardModule)
+      },
+      {
+        path:"home",
+        loadChildren: () => import('./pages/home/home.module').then((m)=>m.HomeModule)
+      },
+      {
+        path:"contacts",
+        loadChildren: () => import('./pages/contacts/contacts.module').then((m)=>m.ContactsModule)
       }
     ]
   },

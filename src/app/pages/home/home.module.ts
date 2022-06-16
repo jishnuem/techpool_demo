@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { HomeRoutingModule } from './home-routing.module';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
-    MatGridListModule,
+    HomeRoutingModule,
     PdfViewerModule
   ]
 })
-export class DashboardModule { }
+export class HomeModule { }
