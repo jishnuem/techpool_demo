@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MasterpageComponent implements OnInit {
 
   showFiller = false;
+  opened=true;
   constructor() { }
 
   ngOnInit(): void {

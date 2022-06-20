@@ -17,8 +17,12 @@
 
 .navbar{
 background-color: #f4f4f4;
-height: 50px;
+
 cursor: pointer;
+}
+
+.nav-link{
+  padding: 10px 25px;
 }
 
 .navbar li a{
@@ -26,8 +30,8 @@ color: rgb(0, 0, 0);
 }
 
 .navbar li a:hover{
-background-color: rgb(206, 203, 225);
-
+background-color: blue;
+color:#fff;
 }
 
 .navbar ul li{
@@ -48,7 +52,7 @@ margin: 10px;
 
 .sidenav ul{
   list-style: none;
-  
+
 }
 
 .sidenav ul li{

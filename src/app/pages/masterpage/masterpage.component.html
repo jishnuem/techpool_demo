@@ -1,4 +1,45 @@
+
+
 <mat-drawer-container class="example-container" autosize>
+  <div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <div class="ml-4" style="margin-left: 20px; color: rgb(0, 0, 0);">
+              <span class="logo-lg">
+             <b>TechPool</b>
+              </span>&nbsp; &nbsp; <button mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+             </div>
+          </a>
+          <button style="color: rgb(0, 0, 0);" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <div class="collapse navbar-collapse ml-4" id="navbarNav">
+            <div id="sidebar-menu" >
+            <ul class="navbar-nav text-center nav-pills">
+              <li  >
+                <a class="nav-link " routerLink="./dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page"><span >Dashboard</span></a>
+              </li>
+              <li  >
+                <a class="nav-link" routerLink="./home" routerLinkActive="active">Home</a>
+              </li>
+              <li  >
+                <a class="nav-link" routerLink="./contacts"  routerLinkActive="active">Contacts</a>
+              </li>
+              <li  >
+                <a class="nav-link" routerLinkActive="active">About Us</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+  </div>
   <mat-drawer #drawer class="example-sidenav" mode="side" opened>
     <div class="mt-1 sidenav">
       <ul>
@@ -19,7 +60,7 @@
       </ul>
 
 
-     
+
     </div>
     <div class="logout">
       <ul>
@@ -28,50 +69,91 @@
           <span>Logout</span>
         </li>
       </ul>
-      
+
     </div>
   </mat-drawer>
-  
-
-<div>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-
-      <div class="container-fluid">
-        <a class="navbar-brand">
-          <div class="ml-4" style="margin-left: 20px; color: rgb(0, 0, 0);">
-            <span class="logo-lg">
-           <b>TechPool</b>
-            </span>&nbsp; &nbsp; <button mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-           </div>
-        </a>
-        <button style="color: rgb(0, 0, 0);" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="drawer.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <div class="collapse navbar-collapse ml-4" id="navbarNav">
-          <div id="sidebar-menu" >
-          <ul class="navbar-nav text-center nav-pills">
-            <li  >
-              <a class="nav-link " routerLink="./dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page"><span >Dashboard</span></a>
-            </li>
-            <li  >
-              <a class="nav-link" routerLink="./home" routerLinkActive="active">Home</a>
-            </li>
-            <li  >
-              <a class="nav-link" routerLink="./contacts"  routerLinkActive="active">Contacts</a>
-            </li>
-            <li  >
-              <a class="nav-link" routerLinkActive="active">About Us</a>
-            </li>
-          </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-  </header>
-</div>
-
 <router-outlet></router-outlet>
 </mat-drawer-container>
+
+
+
+
+ <!-- <header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <div class="ml-4" style="margin-left: 20px; color: rgb(0, 0, 0);">
+          <span class="logo-lg">
+         <b>TechPool</b>
+          </span>&nbsp; &nbsp; <button mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         </div>
+      </a>
+      <button style="color: rgb(0, 0, 0);" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="collapse navbar-collapse ml-4" id="navbarNav">
+        <div id="sidebar-menu" >
+        <ul class="navbar-nav text-center nav-pills">
+          <li  >
+            <a class="nav-link " routerLink="./dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page"><span >Dashboard</span></a>
+          </li>
+          <li  >
+            <a class="nav-link" routerLink="./home" routerLinkActive="active">Home</a>
+          </li>
+          <li  >
+            <a class="nav-link" routerLink="./contacts"  routerLinkActive="active">Contacts</a>
+          </li>
+          <li  >
+            <a class="nav-link" routerLinkActive="active">About Us</a>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+ <mat-sidenav-container >
+  <mat-sidenav #drawer  [(opened)]="opened" mode="side" opened >
+
+    <div class="mt-1 sidenav">
+      <ul>
+        <li>
+          <mat-icon>view_headline</mat-icon>
+          <span>Compose</span>
+        </li>
+
+        <li>
+          <mat-icon>mail</mat-icon><br>
+          <span>Mail</span>
+        </li>
+
+        <li>
+          <mat-icon>contact_phone</mat-icon>
+          <span>Contacts</span>
+        </li>
+      </ul>
+
+
+
+    </div>
+    <div class="logout">
+      <ul>
+        <li>
+          <mat-icon>logout</mat-icon><br>
+          <span>Logout</span>
+        </li>
+      </ul>
+
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
